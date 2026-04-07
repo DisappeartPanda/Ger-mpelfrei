@@ -1,0 +1,197 @@
+---
+const {
+  title = "Entrümpelung in Hannover – schnell & stressfrei.",
+  subtitle = "Haushaltsauflösungs Helfer Hannover übernimmt Entrümpelungen und Haushaltsauflösungen in Hannover und Umgebung – zuverlässig, diskret und besenrein. Du bekommst ein transparentes Festpreis-Angebot nach Fotos oder Besichtigung.",
+} = Astro.props;
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-kicker">Entrümpelung & Haushaltsauflösung</div>
+
+      <h1 class="hero-title">
+        Entrümpelung & Haushaltsauflösung in Hannover –<br/>
+        schnell & stressfrei.
+      </h1>
+
+      <p class="hero-text">{subtitle}</p>
+
+      <div class="hero-actions">
+        <a href="/kontakt" class="btn-primary">
+          Kostenloses Angebot anfragen
+        </a>
+
+        <a href="/leistungen" class="btn-secondary">
+          Leistungen ansehen
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="steps">
+        <div class="hero-kicker">So läuft’s</div>
+        <h2>In 3 Schritten gerümpelfrei</h2>
+
+        <div class="step">
+          <strong>1) Anfrage</strong>
+          <p>Fotos oder Infos senden und Besichtigung vereinbaren.</p>
+        </div>
+
+        <div class="step">
+          <strong>2) Festpreis-Angebot</strong>
+          <p>Transparent und ohne versteckte Kosten.</p>
+        </div>
+
+        <div class="step">
+          <strong>3) Durchführung</strong>
+          <p>Pünktlich, ordentlich und besenrein.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.hero {
+  padding: 60px 0 30px;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 760px;
+}
+
+.hero-kicker {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.hero-title {
+  margin: 14px 0 20px;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #1d2733;
+}
+
+.hero-text {
+  max-width: 520px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(29,39,51,0.8);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn-primary {
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #1d2733;
+  font-weight: 600;
+}
+
+/* RIGHT */
+.hero-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.steps {
+  max-width: 420px;
+  width: 100%;
+}
+
+.steps h2 {
+  margin: 8px 0 20px;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #1d2733;
+}
+
+/* STEPS */
+.step {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.step + .step {
+  margin-top: 12px;
+}
+
+.step strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(0,0,0,0.65);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right {
+    justify-content: flex-start;
+  }
+
+  .steps {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>

@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout title="Impressum - Haushaltsauflösungs Helfer Hannover" canonical="/impressum" description="Impressum Haushaltsauflösungs Helfer Hannover">
+  <Header />
+
+  <Section kicker="Rechtliches" heading="Impressum">
+    <div class="card" style="padding:24px;">
+      <p><strong>Angaben gemäß § 5 DDG</strong></p>
+
+      <p>
+        Haushaltsauflösungs Helfer Hannover<br/>
+        Inhaber: Fabian Steinberg<br/>
+        Wallmodenstr. 49<br/>
+        30625 Hannover
+      </p>
+
+      <p>
+        Telefon: <a href="tel:+491772186997">+49 177 2186997</a><br/>
+        E-Mail: <a href="mailto:fabian.steinberg@gmx.de">fabian.steinberg@gmx.de</a>
+      </p>
+
+      <p>
+        Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br/>
+        Fabian Steinberg, Anschrift wie oben
+      </p>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>

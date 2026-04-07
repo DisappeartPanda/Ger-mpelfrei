@@ -1,0 +1,75 @@
+<div class="faq">
+
+  <details class="faq-item">
+    <summary>Arbeitet ihr mit Festpreis?</summary>
+    <p>Ja. Nach Fotos oder Besichtigung bekommst du ein transparentes Festpreis-Angebot.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Wie schnell geht ein Termin?</summary>
+    <p>Oft kurzfristig möglich. Schreib uns – wir melden uns schnell zurück.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Ist „besenrein“ inklusive?</summary>
+    <p>Ja. Wir übergeben die Räume sauber und ordentlich.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Gibt es Wertanrechnung?</summary>
+    <p>Wenn Gegenstände verwertbar sind, kann das den Preis reduzieren.</p>
+  </details>
+
+</div>
+
+<style>
+  .faq{
+  display:grid;
+  gap:12px;
+}
+
+.faq-item{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  transition:.2s;
+}
+
+.faq-item[open]{
+  box-shadow: var(--shadow);
+}
+
+.faq-item summary{
+  cursor:pointer;
+  font-weight:700;
+  list-style:none;
+  position:relative;
+  padding-right:24px;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+/* Pfeil */
+.faq-item summary::after{
+  content:"+";
+  position:absolute;
+  right:0;
+  top:0;
+  font-size:1.2rem;
+  transition:.2s;
+}
+
+.faq-item[open] summary::after{
+  content:"–";
+}
+
+.faq-item p{
+  margin-top:10px;
+  font-size:.95rem;
+  color: var(--muted);
+}
+</style>

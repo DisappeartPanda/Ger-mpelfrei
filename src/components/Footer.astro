@@ -1,0 +1,257 @@
+---
+const nav = [
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/kontakt", label: "Kontakt" },
+];
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-top">
+        <img
+          src="/HHH-mit-schrift-logo.svg"
+          alt="Haushaltsauflösungs Helfer Hannover Logo"
+          class="footer-logo"
+        />
+
+        <div class="footer-brand-copy">
+          <div class="footer-brand-title">Haushaltsauflösungs Helfer Hannover</div>
+          <div class="footer-brand-subtitle">
+            Entrümpelung · Haushaltsauflösung · Nachlassräumung
+          </div>
+        </div>
+      </div> <div class="footer-badges">
+        <span>✓ Festpreise</span>
+        <span>✓ Schnell vor Ort</span>
+        <span>✓ Besenrein</span>
+      </div>
+
+      <p class="footer-text">
+        Entrümpelung & Haushaltsauflösung in Hannover –
+        zuverlässig, diskret und besenrein.
+      </p>
+
+     
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Navigation</div>
+      <div class="footer-links">
+        {nav.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Kontakt</div>
+      <div class="footer-contact">
+        <div>
+          <span class="footer-label">Telefon</span>
+          <a href="tel:+491772186997">+49 1772186997</a>
+        </div>
+
+        
+        <div>
+          <span class="footer-label">Einsatzgebiet</span>
+          <strong>Hannover + 20 km Umkreis</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Rechtliches</div>
+      <div class="footer-links">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <small>© {new Date().getFullYear()} Haushaltsauflösungs Helfer Hannover</small>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 64px;
+    background: #fff;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-inner {
+    display: grid;
+    gap: 28px;
+    padding: 30px 0 26px;
+    align-items: start;
+  }
+
+  @media (min-width: 960px) {
+    .footer-inner {
+      grid-template-columns: 1.5fr 0.8fr 1fr 0.8fr;
+    }
+  }
+
+  .footer-brand {
+    min-width: 0;
+  }
+
+  .footer-brand-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .footer-logo {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .footer-brand-copy {
+    min-width: 0;
+  }
+
+  .footer-brand-title {
+    font-size: 1rem;
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .footer-brand-subtitle {
+    margin-top: 4px;
+    font-size: 0.88rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  .footer-heading {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .footer-text {
+    margin: 0;
+    max-width: 34ch;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+
+  .footer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links a {
+    color: var(--muted);
+    font-size: 0.96rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: var(--ink);
+  }
+
+  .footer-contact {
+    display: grid;
+    gap: 14px;
+  }
+
+  .footer-contact a,
+  .footer-contact strong {
+    color: var(--ink);
+    font-size: 0.96rem;
+    text-decoration: none;
+  }
+
+  .footer-contact a:hover {
+    color: var(--primary);
+  }
+
+  .footer-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-bottom-inner {
+    padding: 12px 0;
+  }
+
+  .footer-bottom small {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 959px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .footer {
+      margin-top: 52px;
+    }
+
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 24px 0 22px;
+    }
+
+    .footer-brand-top {
+      align-items: center;
+    }
+
+    .footer-logo {
+      width: 54px;
+      height: 54px;
+    }
+
+    .footer-brand-title {
+      font-size: 0.96rem;
+    }
+
+    .footer-brand-subtitle {
+      font-size: 0.82rem;
+    }
+
+    .footer-badges {
+      font-size: 0.86rem;
+    }
+  }
+</style>

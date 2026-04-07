@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout title="Über uns - Haushaltsauflösungs Helfer Hannover" canonical="/ueber-uns" description="Über 123 Gerümpelfrei – verlässlich, diskret, sauber.">
+  <Header />
+
+  <Section kicker="Über uns" heading="Zuverlässig. Diskret. Besenrein.">
+    <div class="grid cols-2">
+      <div class="card" style="padding:18px;">
+        <h2>Unser Anspruch</h2>
+        <p>Entrümpelung soll für dich stressfrei sein. Wir planen sauber, kommunizieren klar und arbeiten ordentlich.</p>
+        <ul>
+          <li>pünktlich & verbindlich</li>
+          <li>freundlich & respektvoll</li>
+          <li>transparente Preise</li>
+        </ul>
+      </div>
+      <div class="card" style="padding:18px;">
+        <h2>So arbeiten wir</h2>
+        <p>Nach deiner Anfrage bekommst du ein Festpreis-Angebot. Danach erledigen wir die Räumung zügig und übergeben besenrein.</p>
+        <a class="btn" href="/kontakt">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </Section>
+
+  <Footer />
+</BaseLayout>

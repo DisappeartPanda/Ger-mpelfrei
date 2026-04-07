@@ -1,0 +1,13 @@
+---
+const { kicker, heading } = Astro.props;
+---
+
+<section style="padding:22px 0;">
+  <div class="container">
+    {kicker ? <div class="kicker">{kicker}</div> : null}
+    {heading ? <h2 style="margin-top:6px;">{heading}</h2> : null}
+    <div style="margin-top:12px;">
+      <slot />
+    </div>
+  </div>
+</section>

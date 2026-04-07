@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Section from "../components/Section.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout
+  title="Leistungen – Haushaltsauflösungs Helfer Hannover"
+  canonical="/leistungen"
+  description="Leistungen von 123 Gerümpelfrei in Hannover (20 km Umkreis): Entrümpelung, Haushaltsauflösung, Keller, Garage, Haus, Gewerbe."
+>
+
+  <Header />
+
+  <Section kicker="Leistungen" heading="Was wir für dich übernehmen">
+  <div class="services-detail">
+
+    <div class="service-detail">
+      <h2>Entrümpelung</h2>
+      <p>Keller, Dachboden, Garage, Wohnung oder Haus – wir räumen vollständig und übergeben sauber.</p>
+      <ul>
+        <li>Tragearbeiten & Demontage nach Absprache</li>
+        <li>Besenreine Übergabe</li>
+        <li>Zuverlässige Termine</li>
+      </ul>
+    </div>
+
+    <div class="service-detail">
+      <h2>Haushaltsauflösung</h2>
+      <p>Diskret, organisiert und respektvoll – ideal bei Umzug, Pflegefall oder Nachlass.</p>
+      <ul>
+        <li>Planung & Ablaufkoordination</li>
+        <li>Wertanrechnung möglich</li>
+        <li>Besichtigung vorab</li>
+      </ul>
+    </div>
+
+    <div class="service-detail">
+      <h2>Gewerbe & Büro</h2>
+      <p>Räumungen mit Zeitfenster, strukturierter Ablauf und klare Kommunikation.</p>
+      <ul>
+        <li>Flexible Termine (auch abends/wochenends)</li>
+        <li>Projektkoordination</li>
+        <li>Schnelle Umsetzung</li>
+      </ul>
+    </div>
+
+    <div class="service-detail highlight">
+      <h2>Zusatzleistungen</h2>
+      <p>Je nach Bedarf ergänzen wir unsere Leistungen individuell:</p>
+      <ul>
+        <li>Demontage (Möbel, Küchen etc.)</li>
+        <li>Sortier- & Tragehilfe</li>
+        <li>Express-Termine möglich</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="services-cta">
+    <a class="btn-primary" href="/kontakt">Jetzt Angebot anfragen</a>
+  </div>
+</Section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .services-detail{
+  display:grid;
+  gap:22px;
+}
+
+@media (min-width: 900px){
+  .services-detail{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-detail{
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-detail h2{
+  margin-bottom: 10px;
+}
+
+.service-detail p{
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.service-detail ul{
+  padding-left: 18px;
+}
+
+.service-detail li{
+  margin-bottom: 6px;
+}
+
+/* Highlight Card */
+.service-detail.highlight{
+  background: var(--primary-soft);
+  border: 1px solid rgba(94,168,93,.2);
+}
+
+/* CTA */
+.services-cta{
+  margin-top: 28px;
+}
+
+.btn-primary {
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  max-width: fit-content;
+}
+
+.btn-secondary {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #1d2733;
+  font-weight: 600;
+}
+</style>
